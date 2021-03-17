@@ -1,17 +1,19 @@
-export const getTimeFromLocal = (userId: any) => {
-  const localTime = localStorage.getItem(`${userId}Time`);
+import { Note, Time } from '../types/types';
+
+export const getTimeFromLocal = (currentUser: string) => {
+  const localTime = localStorage.getItem(`${currentUser}_times`);
   return localTime ? JSON.parse(localTime) : [];
 };
 
-export const getNotesFromLocal = (userId: any) => {
-  const localNotes = localStorage.getItem(`${userId}Notes`);
+export const getNotesFromLocal = (currentUser: string) => {
+  const localNotes = localStorage.getItem(`${currentUser}_notes`);
   return !localNotes ? [] : JSON.parse(localNotes);
 };
 
-export const setNotesToLocal = (userId: any, notes: Note[]) => {
-  localStorage.setItem(`${userId}Notes`, JSON.stringify(notes));
+export const setNotesToLocal = (currentUser: string, notes: Note[]) => {
+  localStorage.setItem(`${currentUser}_notes`, JSON.stringify(notes));
 };
 
-export const setTimeToLocal = (userId: any, time: number[]) => {
-  localStorage.setItem(`${userId}Time`, JSON.stringify(time));
+export const setTimeToLocal = (currentUser: string, time: Time[]) => {
+  localStorage.setItem(`${currentUser}_times`, JSON.stringify(time));
 };

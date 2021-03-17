@@ -1,13 +1,12 @@
 import React from 'react';
+import './pages.css';
 
 interface Props {}
 
-const Home = (props: Props) => {
+export const Home = (props: Props) => {
   return (
-    <div>
-      <p>Time tracker home</p>
+    <div className="home">
+      <h2 className="home-text">Time tracker home</h2>
     </div>
   );
 };
-
-export default Home;

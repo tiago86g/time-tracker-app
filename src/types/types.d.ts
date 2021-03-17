@@ -1,3 +1,9 @@
+import { UsersState } from '../context/UsersContext';
+type UsersStateType = typeof initalState;
+
+type AddNote = (newNote: string) => void;
+type AddTime = (newTime: string) => void;
+
 type Users = {
   id: number;
   name: string;
@@ -10,7 +16,11 @@ type Note = {
   user: string | null;
 };
 
-type Time = any;
+// type Time = any;
+// type Note = any;
 
-type AddNote = (newNote: string) => void;
-type AddTime = (newTime: string) => void;
+type Time = {
+  id: string;
+  hour: number;
+  user: string | null;
+};

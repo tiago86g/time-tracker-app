@@ -1,9 +1,21 @@
 .navbar {
   background-color: #060b26;
-  height: 80px;
+  height: 6rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+}
+
+.reports {
+  margin-right: 2rem;
+  font-size: 2rem;
+  background: none
+}
+
+.logo {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #f5f5f5;
 }
 
 .menu-bars {

@@ -1,18 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+
 }
 
-.home,
-.reports,
-.products {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
+html {
+  font-size: 100%;
+
+  --color-primary: #00AEEF;
+  --color-primary-dark: #008ABE;
+  --color-primary-light: #6ACCF1;
+
+  --color-secondary: #FF4501;
+
+  --color-placeholder-text: #242424;
+
+  --color-bg-dark: #101522;
+  --color-bg-mid: #DBDBDB;
+  --color-bg-light: #ffffff;
+
+  --color-text-light: #ffffff;
+  --color-text-mid-dark: #1c2237;
+  --color-text-mid-light: #a9b3c1;
+  --color-text-dark: #101522;
+
+
+  --color-neutral-darker: #000000;
+  --color-neutral-dark: #101522;
+  --color-neutral-midDark: #C4C4C4;
+  /* --color-neutral-mid:; */
+  --color-neutral-midLight: #DBDBDB;
+  /* --color-neutral-light:; */
+  --color-neutral-lighter: #ffffff;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+ul,
+li {
+  list-style: none;
 }

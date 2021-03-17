@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { AddNote, AddTime } from '../../types/types';
 
 interface TrackInputFormProps {
   addNote: AddNote;

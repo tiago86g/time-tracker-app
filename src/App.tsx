@@ -3,8 +3,8 @@ import './App.css';
 import { getUsers } from './utils/getUsers';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar/Navbar';
-import Home from './pages/Home';
-// import Reposts from './pages/Reposts';
+import { Home } from './pages/Home';
+import { Reports } from './pages/Reports';
 import { User } from './pages/User';
 
 function App() {
@@ -12,7 +12,9 @@ function App() {
 
   useEffect(() => {
     getUsers().then((items) => {
+      console.log('fetchRequested');
       setUsers(items);
+      console.log('fetchDone');
     });
   }, []);
 
@@ -22,7 +24,9 @@ function App() {
         <Navbar users={users} />
         <Switch>
           <Route path="/" exact component={Home} />
-          {/* Route path="/reports" component={Reports} /> */}
+          <Route path="/reports" component={Reports}>
+            <Reports users={users} />
+          </Route>
           <Route path="/:id" component={User} />
         </Switch>
       </Router>
