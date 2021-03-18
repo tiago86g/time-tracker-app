@@ -15,3 +15,41 @@
   margin-bottom: 40vh;
   font-weight: 900;
 }
+
+.TrackInputForm_button-container {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.clear-data_button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #f5c295;
+  color: #784502;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.6s ease-in-out,
+    transform 0.6s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+clear-data_button:hover,
+clear-data_button:focus {
+  background: #1a83ff;
+}
+
+clear-data_button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+clear-data_button:active {
+  transform: scale(0.99);
+}
