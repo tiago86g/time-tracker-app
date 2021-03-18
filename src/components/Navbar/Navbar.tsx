@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import * as IoIcons from 'react-icons/io';
 import * as AiIcons from 'react-icons/ai';
 import './Navbar.css';
-import { Users } from '../../types/types';
+import { User } from '../../types/types';
 
 interface NavbarProps {
-  users: Users[];
+  users: User[];
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ users }) => {

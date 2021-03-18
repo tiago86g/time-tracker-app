@@ -4,6 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
 
 .reports {
@@ -26,7 +29,7 @@
 
 .nav-menu {
   background-color: #060b26;
-  width: 250px;
+  width: 21rem;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -67,6 +70,7 @@
 }
 
 .nav-menu-items {
+  z-index: 1000;
   width: 100%;
 }
 
@@ -77,8 +81,4 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-span {
-  margin-left: 16px;
 }
