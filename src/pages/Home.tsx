@@ -13,7 +13,7 @@ export const Home = (props: Props) => {
           className="clear-data_button"
           type="submit"
           onClick={() => {
-            if (window.confirm('Are you sure you wish to delete all data'))
+            if (window.confirm('Are you sure you wish to delete all data?'))
               localStorage.clear();
           }}
         >
