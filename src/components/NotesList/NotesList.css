@@ -1,0 +1,26 @@
+.NotesList_user-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.NotesList_user-time {
+  font-weight: bold;
+  width: 5vw;
+  text-align: right;
+  color: #1a83ff;
+}
+
+.NotesList_user-note {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .NotesList_user-time {
+    width: 30px;
+  }
+
+  .NotesList_user-list {
+    margin-top: 0px;
+  }
+}
