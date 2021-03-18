@@ -4,7 +4,7 @@ type UsersStateType = typeof initalState;
 type AddNote = (newNote: string) => void;
 type AddTime = (newTime: string) => void;
 
-type Users = {
+type User = {
   id: number;
   name: string;
   username: string;
@@ -16,11 +16,11 @@ type Note = {
   user: string | null;
 };
 
-// type Time = any;
+// type Time = number;
 // type Note = any;
 
 type Time = {
   id: string;
-  hour: number;
+  hour: number | null;
   user: string | null;
 };

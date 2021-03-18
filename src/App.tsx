@@ -21,7 +21,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar users={users} />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/reports" component={Reports}>
@@ -29,6 +28,7 @@ function App() {
           </Route>
           <Route path="/:id" component={User} />
         </Switch>
+        <Navbar users={users} />
       </Router>
     </>
   );

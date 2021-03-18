@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
+import './TrackInputForm.css';
 import { AddNote, AddTime } from '../../types/types';
 
 interface TrackInputFormProps {
@@ -32,28 +33,46 @@ export const TrackInputForm: React.FC<TrackInputFormProps> = ({
     }
   };
   return (
-    <form>
-      <div>
-        <input
-          type="number"
-          name="time"
-          placeholder="insert your hours"
-          value={newTime}
-          onChange={handleTimeChange}
-        />
-      </div>
-      <div>
-        <input
-          type="text"
-          name="note"
-          placeholder="write a note"
-          value={newNote}
-          onChange={handleNoteChange}
-        />
-      </div>
-      <button type="submit" onClick={handleSubmit}>
-        submit
-      </button>
-    </form>
+    <div className="TrackInputForm_container">
+      <form>
+        <div className="TrackInputForm_input-container">
+          <input
+            type="number"
+            name="time"
+            autoComplete="off"
+            value={newTime}
+            onChange={handleTimeChange}
+            required
+          />
+          <label htmlFor="time" className="TrackInputForm_label-name">
+            <span className="TrackInputForm_content-name">
+              Insert your hours
+            </span>
+          </label>
+        </div>
+        <div className="TrackInputForm_input-container">
+          <input
+            type="text"
+            name="note"
+            autoComplete="off"
+            value={newNote}
+            onChange={handleNoteChange}
+            required
+          />
+          <label htmlFor="note" className="TrackInputForm_label-name">
+            <span className="TrackInputForm_content-name">Leave a note</span>
+          </label>
+        </div>
+        <div className="TrackInputForm_button-container">
+          <button
+            className="TrackInputForm_button"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            submit
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };

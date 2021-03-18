@@ -1,20 +1,17 @@
 .container {
   height: 100vh;
-  display: grid;
+  display: flex;
   place-items: center;
-  background-color: #171717;
+  flex-direction: column;
   padding: 2rem;
+  padding-top: 10rem;
 }
 
 .home-text {
   font-size: 6rem;
-  color: rgb(62, 62, 62);
+  /* color: rgb(62, 62, 62); */
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 30vh;
+  margin-bottom: 40vh;
   font-weight: 900;
-}
-
-.user-name {
-  color: white;
 }

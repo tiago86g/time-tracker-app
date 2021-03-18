@@ -1,0 +1,127 @@
+.TrackInputForm_container {
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.TrackInputForm_input-container {
+  width: 50vw;
+  position: relative;
+  /* height: 30vh; */
+  overflow: hidden;
+}
+
+.TrackInputForm_input-container {
+  margin-bottom: 30px;
+}
+
+.TrackInputForm_input-container input {
+  width: 100%;
+  height: 5rem;
+  color: #595f6e;
+  transform: translateY(20%);
+  font-size: 1.5rem;
+  border: none;
+  outline: transparent;
+}
+
+.TrackInputForm_input-container label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #060b26
+}
+
+.TrackInputForm_input-container label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -1px;
+  left: 0px;
+  pointer-events: none;
+  border-bottom: 3px solid #1a83ff;
+  transform: translate(-100%);
+  transition: all 0.3s ease;
+}
+
+.TrackInputForm_content-name {
+  font-size: 1rem;
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.TrackInputForm_input-container input:focus+.TrackInputForm_label-name .TrackInputForm_content-name,
+.TrackInputForm_input-container input:valid+.TrackInputForm_label-name .TrackInputForm_content-name {
+  transform: translateY(-150%);
+  font-size: 1rem;
+  bottom: 1rem;
+  color: #1a83ff;
+}
+
+.TrackInputForm_input-container input:focus+.TrackInputForm_label-name::after,
+.TrackInputForm_input-container input:valid+.TrackInputForm_label-name::after {
+  transform: translateX(0%);
+}
+
+.TrackInputForm_button-container {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+/* .TrackInputForm_button {
+  text-decoration: none;
+  font-size: 1.5rem;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+} */
+
+.TrackInputForm_button {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #1a83ff;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.6s ease-in-out,
+    transform 0.6s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+TrackInputForm_button:hover,
+TrackInputForm_button:focus {
+  background: #1a83ff;
+}
+
+TrackInputForm_button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+TrackInputForm_button:active {
+  transform: scale(0.99);
+}
+
+@media screen and (max-width: 768px) {
+  .TrackInputForm_form {
+    width: 80vw;
+  }
+}
