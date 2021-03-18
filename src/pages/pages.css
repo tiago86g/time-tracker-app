@@ -4,7 +4,7 @@
   place-items: center;
   flex-direction: column;
   padding: 2rem;
-  padding-top: 10rem;
+  padding-top: 9rem;
 }
 
 .home-text {
@@ -12,8 +12,14 @@
   /* color: rgb(62, 62, 62); */
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 40vh;
+  margin-bottom: 30vh;
   font-weight: 900;
+}
+
+.Home_heading {
+  font-weight: 300;
+  color: #1a83ff;
+  margin-bottom: 2rem;
 }
 
 .TrackInputForm_button-container {
@@ -28,8 +34,8 @@
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: #f5c295;
-  color: #784502;
+  background: #ceccca;
+  color: #6a6a6a;
   font-size: 1.5rem;
   border-radius: 4px;
   cursor: pointer;

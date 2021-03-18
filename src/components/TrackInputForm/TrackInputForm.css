@@ -1,5 +1,5 @@
 .TrackInputForm_container {
-  height: 30vh;
+  height: 30rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -7,7 +7,7 @@
 }
 
 .TrackInputForm_input-container {
-  width: 50vw;
+  width: 30vw;
   position: relative;
   /* height: 30vh; */
   overflow: hidden;
@@ -77,17 +77,6 @@
   justify-content: center;
 }
 
-/* .TrackInputForm_button {
-  text-decoration: none;
-  font-size: 1.5rem;
-  width: 60%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  border-radius: 4px;
-} */
-
 .TrackInputForm_button {
   display: inline-block;
   border: none;
@@ -122,6 +111,10 @@ TrackInputForm_button:active {
 
 @media screen and (max-width: 768px) {
   .TrackInputForm_form {
+    width: 80vw;
+  }
+
+  .TrackInputForm_input-container {
     width: 80vw;
   }
 }
