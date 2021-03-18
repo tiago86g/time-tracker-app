@@ -9,19 +9,21 @@ interface NotesListProps {
 
 export const NotesList: React.FC<NotesListProps> = ({ notes, times }) => {
   return (
-    <div className="user-list">
+    <div className="NotesList_user-list">
       <ul>
         {times.map((time) => (
-          <li key={time.id} className="user-time">{`${time.hour} hours`}</li>
+          <li key={time.id} className="NotesList_user-time">
+            {`${time.hour}h`}
+          </li>
         ))}
       </ul>
       <ul>
         {notes ? (
           notes.map((note: Note) => (
             <li
-              className="user-note"
+              className="NotesList_user-note"
               key={note.id}
-            >{`${note.user}: ${note.text}`}</li>
+            >{`${note.text}`}</li>
           ))
         ) : (
           <p>No notes</p>
