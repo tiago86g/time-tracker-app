@@ -17,3 +17,12 @@ export const setNotesToLocal = (currentUser: string, notes: Note[]) => {
 export const setTimeToLocal = (currentUser: string, time: Time[]) => {
   localStorage.setItem(`${currentUser}_times`, JSON.stringify(time));
 };
+
+// export const setUsersToLocal = (users: []) => {
+//   localStorage.setItem('users', JSON.stringify(users));
+// };
+
+// export const setUsersToLocal = (item: string) => {
+//   const usersFromLocal = localStorage.getItem(item);
+//   return !usersFromLocal ? [] : JSON.parse(usersFromLocal);
+// };

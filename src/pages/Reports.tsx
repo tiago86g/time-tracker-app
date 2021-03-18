@@ -35,7 +35,7 @@ export const Reports: React.FC<Props> = () => {
   // console.log(typeof users);
 
   return (
-    <div>
+    <div className="container">
       <h2>All reports will come here</h2>
       {users && users !== [] ? (
         users.map((user: string) =>

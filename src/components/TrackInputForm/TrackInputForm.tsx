@@ -22,10 +22,14 @@ export const TrackInputForm: React.FC<TrackInputFormProps> = ({
 
   const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    addNote(newNote);
-    addTime(newTime);
-    setNewNote('');
-    setNewTime('');
+    if (!newNote || !newTime) {
+      alert('Please insert a note and a time');
+    } else {
+      addNote(newNote);
+      addTime(newTime);
+      setNewNote('');
+      setNewTime('');
+    }
   };
   return (
     <form>
@@ -33,7 +37,7 @@ export const TrackInputForm: React.FC<TrackInputFormProps> = ({
         <input
           type="number"
           name="time"
-          placeholder="insert your time"
+          placeholder="insert your hours"
           value={newTime}
           onChange={handleTimeChange}
         />
@@ -42,7 +46,7 @@ export const TrackInputForm: React.FC<TrackInputFormProps> = ({
         <input
           type="text"
           name="note"
-          placeholder="white a note"
+          placeholder="write a note"
           value={newNote}
           onChange={handleNoteChange}
         />

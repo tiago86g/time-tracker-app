@@ -18,15 +18,12 @@ export const User: React.FC<UserProps> = ({ match }) => {
   const [currentUser, setCurrentUser] = useState('');
 
   const initialNotes: Note[] = getNotesFromLocal('notes') || [];
-  console.log(initialNotes);
   const initialTime: Time[] = getTimeFromLocal('times') || [];
-  console.log(initialTime);
   const [notes, setNotes] = useState(initialNotes);
   const [times, setTimes] = useState(initialTime);
 
   const addNote: AddNote = (newNote) => {
     setNotes([...notes, { id: uuidv4(), text: newNote, user: currentUser }]);
-    console.log(notes);
     setNotesToLocal(currentUser, notes);
   };
   const addTime: AddTime = (newTime) => {
@@ -34,22 +31,18 @@ export const User: React.FC<UserProps> = ({ match }) => {
       ...times,
       { id: uuidv4(), hour: Number(newTime), user: currentUser },
     ]);
-    console.log(times);
     setTimeToLocal(currentUser, times);
   };
 
   useEffect(() => {
-    console.log(match);
     if (!match) {
-      console.log('no match');
+      alert('no user selected');
     } else {
       const userId = match.params.id.slice(2);
       getUser(userId).then((items) => {
         setCurrentUser(items.name);
-        console.log('atualizou user');
         setNotes(getTimeFromLocal(items.name));
         setTimes(getNotesFromLocal(items.name));
-        console.log('atualizou time e notes');
       });
     }
   }, [match]);
@@ -60,9 +53,10 @@ export const User: React.FC<UserProps> = ({ match }) => {
   }, [notes, times]);
 
   return (
-    <div className="home">
+    <div className="container">
       <h2 className="user-name">{`Hi ${currentUser}`}</h2>
       <TrackInputForm addNote={addNote} addTime={addTime} />
+      {console.log(notes)}
       <ul>
         {notes ? (
           notes.map((note: Note) => (
@@ -75,7 +69,6 @@ export const User: React.FC<UserProps> = ({ match }) => {
           <p>No notes</p>
         )}
       </ul>
-      {console.log(notes, times)}
     </div>
   );
 };
