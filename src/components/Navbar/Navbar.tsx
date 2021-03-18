@@ -24,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({ users }) => {
           <Link to="/" className="logo">
             <h1>Time tracker</h1>
           </Link>
-          {/* <Link to={{ pathname: 'Reports', state: users }} className="reports"> */}
           <Link to="Reports" className="reports">
             <IoIcons.IoIosPaper />
           </Link>
